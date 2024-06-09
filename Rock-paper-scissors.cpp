@@ -1,8 +1,10 @@
-//ROCK, PAPER ,SCISSORS
+//ROCK, PAPER, SCISSORS
 #include <iostream>//includes the input output stream library 
 #include <cstdlib>//this line includes standard library for utilities in c++ for generating pseudo-random nums
 #include <ctime>//Used for handling time related functions which seed the random number genration
 using namespace std ;
+
+string lower_case_converter(string s);
 
 void playGame( string playerChoice)
 {
@@ -46,9 +48,11 @@ int main()
     do{
         cout<<"Pick your choice(rock/paper/scissors):"<<endl;
         string playerChoice;
-        
     
         cin>>playerChoice;
+        playerChoice=lower_case_converter(playerChoice);
+
+        
         if (playerChoice=="rock"||playerChoice=="paper"||playerChoice=="scissors")
         {
             playGame(playerChoice);
@@ -67,6 +71,18 @@ int main()
     
     return 0;
     
+}
+
+string lower_case_converter(string s)
+{
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if (s[i]>='A' && s[i]<='Z')
+        {
+            s[i]+=32;
+        }
+    }
+    return s;
 }
 
 
