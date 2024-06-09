@@ -1,4 +1,4 @@
-//ROCK, PAPER, SCISSORS
+//ROCK, PAPER, SCISSORS game
 #include <iostream>//includes the input output stream library 
 #include <cstdlib>//this line includes standard library for utilities in c++ for generating pseudo-random nums
 #include <ctime>//Used for handling time related functions which seed the random number genration
